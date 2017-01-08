@@ -1,0 +1,14 @@
+﻿@model List<Blog.Models.Comment>
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<div class="form-group">
+    @Html.LabelFor(m => m.Content, new { @class = "control-label col-sm-4" })
+    <div class="col-sm-4">
+        @Html.TextAreaFor(m => m.Content, new { @class = "form-control", @rows = "7" })
+        </div>
+    </div>
+
+

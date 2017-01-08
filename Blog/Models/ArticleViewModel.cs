@@ -16,6 +16,16 @@ namespace Blog.Models
 
         public string  Tags { get; set; }
 
+        [ForeignKey("Comment")]
+        public int CommentId { get; set; }
+
+        public virtual Comment Comment { get; set; }
+
+        [ForeignKey("Article")]
+        public int ArticleId { get; set; }
+
+        public virtual Article Article { get; set; }
+
         [ForeignKey("Category")]
         public int CategoryId { get; set; }
 
@@ -30,5 +40,6 @@ namespace Blog.Models
 
         public string AuthorId { get; set; }
         public List<Category> Categories { get; internal set; }
+        public List<Comment> Comments { get; internal set; }
     }
 }

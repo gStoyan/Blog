@@ -14,6 +14,7 @@ namespace Blog.Controllers
 {
     public class ArticleController : Controller
     {
+         
         // GET: Article
         public ActionResult Index()
         {
@@ -45,6 +46,7 @@ namespace Blog.Controllers
                     .Where(a => a.Id == id)
                     .Include(a => a.Author)
                     .Include(a => a.Tags)
+                    .Include(a => a.Comments)
                     .First();
 
                 if (article == null)

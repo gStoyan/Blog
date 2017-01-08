@@ -13,11 +13,23 @@
                     <h2>
                         @Html.ActionLink(string.Format($"{category.Name} ({category.Articles.Count})"),
                         "ListArticles", "Home", new { @categoryId = category.Id }, null)
-                        <img src="C:\Users\Stoyan Grancharov\Desktop\blogCSharp\Pictures\csgo.img" alt="CS" style="width:304px;height:228px;">
+                       
                 </h2>
+                   
             </p>
         </div>
         }
+        <div>
+            <a href="http://localhost:56157/Home/ListArticles?categoryId=3">
+            <img src="@Url.Content("/Content/Pictures/csgo.jpg")" alt="CS" style="float:left;width:550px;height:600px;" />
+            </a>
+        </div>
+        <div>
+            <a href="http://localhost:56157/Home/ListArticles?categoryId=4">
+                <img src="@Url.Content("/Content/Pictures/dota-2-logo-20156-hd-wallpapers.jpg")" alt="CS" style="float:right;width:550px;height:600px;" />
+            </a>
+        </div>
     </div>
 </div>
+
 <hr />
